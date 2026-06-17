@@ -1,0 +1,4 @@
+baseURL = 'https://legal.vitalscanpro.com/'
+locale = 'en-us'
+title = 'Legal VitalScan Pro'
+theme = 'ananke'
