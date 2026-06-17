@@ -1,9 +1,14 @@
 ---
+title: "Privacy Policy"
+date: 2026-06-17T12:05:00Z
+draft: false
+---
+
 # Privacy Policy
 
 **Vital Scan Pro**
 *Last Updated: March 22, 2025 | Version 1.0.0*
----
+
 ## Overview
 
 Vital Scan Pro takes your privacy and the security of your health information very seriously. This Privacy Policy explains what data we collect, how we use it, how we protect it, and your rights under GDPR, HIPAA, CCPA/CPRA, and other applicable laws.
@@ -217,14 +222,3 @@ We will notify you of material changes via email and in-app notification at leas
 **Privacy Officer:** privacy@vitalscanpro.com
 **Address:** str. Trajki Kitanchev, 4000 Plovdiv, Bulgaria
 *This Privacy Policy was last reviewed by our legal team on March 22, 2025.*
-----------------------------------------------------------------------------
-
-Your privacy is important to us. This document outlines how we handle your data.
-
-### Data Collection
-
-We only collect what is necessary for the operation of VitalScan Pro.
-
-### Data Security
-
-All data is encrypted in transit and at rest.
