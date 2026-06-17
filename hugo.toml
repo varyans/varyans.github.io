@@ -1,3 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://legal.vitalscanpro.com/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Legal VitalScan Pro'
+theme = 'ananke'
