@@ -1,3 +1,4 @@
+# Best practice: Direct deployment via GitHub Actions (no gh-pages branch needed)
 name: Deploy Hugo site to Pages
 
 on:
@@ -6,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -32,15 +33,27 @@ jobs:
         with:
           hugo-version: '0.163.2'
           extended: true
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
       - name: Build with Hugo
         run: |
           hugo \
             --gc \
-            --minify
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-          force_orphan: true
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
